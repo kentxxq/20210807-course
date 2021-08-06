@@ -1,0 +1,16 @@
+title: '20210807'
+description: first test
+template:
+  repo: 20210807-template
+  name: '20210807'
+before:
+  - type: createIssue
+    title: Welcome!
+    body: new-issue.md
+steps:
+  - title: First step
+    description: The first step in your course
+    event: issues.assigned
+    link: '{{ repoUrl }}'
+    actions:
+      - type: closeIssue
